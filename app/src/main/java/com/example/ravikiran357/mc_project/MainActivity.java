@@ -215,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog2.setTitle("Testing...");
                 progressDialog2.setMessage("Evaluating " + classifier + " model");
                 progressDialog2.setIndeterminate(true);
+                progressDialog2.setCancelable(false);
                 progressDialog2.show();
 
                 mHandler = new Handler();// This statement is to be called by the main thread
@@ -305,6 +306,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setTitle("Training...");
         progressDialog.setMessage("Downloading model from server");
         progressDialog.setIndeterminate(true);
+        progressDialog.setCancelable(false);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         downloadTask.execute(serverRequestURL, percent, classifierName);
     }

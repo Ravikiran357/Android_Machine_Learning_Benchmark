@@ -44,7 +44,7 @@ class MLTestDriver {
             writerRes.print(result + " \n " + evaluateTrainingData.toSummaryString(false));
             PrintWriter writer = new PrintWriter(new FileWriter(MainActivity.LOG_FILE_PATH, true)); // log file
             writer.println(evaluateTrainingData.toClassDetailsString(" \n\n\n ******* RUN: " +
-                    new SimpleDateFormat("yyyy/MM/dd.HH:mm:ss").format(new Date()) + " - " +
+                    new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss").format(new Date()) + " - " +
                     classifierName + " - " + percent + "% *******"));
             writer.printf(result);
             writer.print(evaluateTrainingData.toSummaryString(true));
